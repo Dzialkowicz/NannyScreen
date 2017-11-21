@@ -35,7 +35,7 @@ class CalmScreenViewController: UIViewController {
     @IBAction func returnToMainMenuButton(_ sender: Any) {
         //Returns to Main Menu Screen
         print("Returning to Main Screen")
-        self.performSegue(withIdentifier: "unwindFromCalm", sender: self)
+        dismiss(animated: true, completion: nil)
     }
     
     

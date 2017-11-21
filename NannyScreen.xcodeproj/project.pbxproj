@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1A6E6C1FB35CAC00CC8DE6 /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1A6E6A1FB35CAC00CC8DE6 /* AudioKitUI.framework */; };
+		1F1A6E6D1FB35CAC00CC8DE6 /* AudioKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1A6E6A1FB35CAC00CC8DE6 /* AudioKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F1A6E6E1FB35CAC00CC8DE6 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1A6E6B1FB35CAC00CC8DE6 /* AudioKit.framework */; };
+		1F1A6E6F1FB35CAC00CC8DE6 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1A6E6B1FB35CAC00CC8DE6 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F3404DB1F5315E0001D3010 /* MenuTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3404DA1F5315E0001D3010 /* MenuTextField.swift */; };
-		1F63268E1F923A6200EC48FE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F63268C1F923A6200EC48FE /* AudioKit.framework */; };
-		1F63268F1F923A6200EC48FE /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F63268D1F923A6200EC48FE /* AudioKitUI.framework */; };
 		1F921E331F51AA9000F590C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F921E321F51AA9000F590C7 /* AppDelegate.swift */; };
 		1F921E351F51AA9000F590C7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F921E341F51AA9000F590C7 /* MenuViewController.swift */; };
 		1F921E381F51AA9000F590C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F921E361F51AA9000F590C7 /* Main.storyboard */; };
@@ -38,10 +40,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F1A6E701FB35CAC00CC8DE6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F1A6E6F1FB35CAC00CC8DE6 /* AudioKit.framework in Embed Frameworks */,
+				1F1A6E6D1FB35CAC00CC8DE6 /* AudioKitUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F1A6E6A1FB35CAC00CC8DE6 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = Carthage/Build/iOS/AudioKitUI.framework; sourceTree = "<group>"; };
+		1F1A6E6B1FB35CAC00CC8DE6 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		1F3404DA1F5315E0001D3010 /* MenuTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTextField.swift; sourceTree = "<group>"; };
-		1F63268C1F923A6200EC48FE /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../Desktop/AudioKit-iOS/AudioKit.framework"; sourceTree = "<group>"; };
-		1F63268D1F923A6200EC48FE /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = "../../Desktop/AudioKit-iOS/AudioKitUI.framework"; sourceTree = "<group>"; };
+		1F3E8A5B1FC2F48A0040F36D /* NannyScreen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NannyScreen.entitlements; sourceTree = "<group>"; };
 		1F921E2F1F51AA9000F590C7 /* NannyScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NannyScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F921E321F51AA9000F590C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F921E341F51AA9000F590C7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -60,15 +78,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F921E2C1F51AA9000F590C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F63268E1F923A6200EC48FE /* AudioKit.framework in Frameworks */,
-				1F63268F1F923A6200EC48FE /* AudioKitUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F921E401F51AA9000F590C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,27 +92,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FA57F1F1F9398E60087B2DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1A6E6E1FB35CAC00CC8DE6 /* AudioKit.framework in Frameworks */,
+				1F1A6E6C1FB35CAC00CC8DE6 /* AudioKitUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F63268B1F923A6200EC48FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1F63268C1F923A6200EC48FE /* AudioKit.framework */,
-				1F63268D1F923A6200EC48FE /* AudioKitUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1F921E261F51AA9000F590C7 = {
 			isa = PBXGroup;
 			children = (
+				1F1A6E6B1FB35CAC00CC8DE6 /* AudioKit.framework */,
+				1F1A6E6A1FB35CAC00CC8DE6 /* AudioKitUI.framework */,
 				1F3404DA1F5315E0001D3010 /* MenuTextField.swift */,
 				1F921E311F51AA9000F590C7 /* NannyScreen */,
 				1F921E461F51AA9000F590C7 /* NannyScreenTests */,
 				1F921E511F51AA9000F590C7 /* NannyScreenUITests */,
 				1F921E301F51AA9000F590C7 /* Products */,
-				1F63268B1F923A6200EC48FE /* Frameworks */,
+				1FA57F271F939AFC0087B2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +131,7 @@
 		1F921E311F51AA9000F590C7 /* NannyScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1F3E8A5B1FC2F48A0040F36D /* NannyScreen.entitlements */,
 				1F921E321F51AA9000F590C7 /* AppDelegate.swift */,
 				1F921E341F51AA9000F590C7 /* MenuViewController.swift */,
 				1FE5BCA31F8116AB00AA02A4 /* MonitorScreenViewController.swift */,
@@ -150,6 +162,13 @@
 			path = NannyScreenUITests;
 			sourceTree = "<group>";
 		};
+		1FA57F271F939AFC0087B2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,8 +177,9 @@
 			buildConfigurationList = 1F921E571F51AA9000F590C7 /* Build configuration list for PBXNativeTarget "NannyScreen" */;
 			buildPhases = (
 				1F921E2B1F51AA9000F590C7 /* Sources */,
-				1F921E2C1F51AA9000F590C7 /* Frameworks */,
 				1F921E2D1F51AA9000F590C7 /* Resources */,
+				1FA57F1F1F9398E60087B2DD /* Frameworks */,
+				1F1A6E701FB35CAC00CC8DE6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,8 +238,14 @@
 				TargetAttributes = {
 					1F921E2E1F51AA9000F590C7 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = L63ZXW5B42;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					1F921E421F51AA9000F590C7 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -393,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -457,10 +483,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NannyScreen/NannyScreen.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L63ZXW5B42;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit-iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NannyScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JakubSanecki.NannyScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -470,10 +506,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NannyScreen/NannyScreen.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L63ZXW5B42;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AudioKit-iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NannyScreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JakubSanecki.NannyScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};

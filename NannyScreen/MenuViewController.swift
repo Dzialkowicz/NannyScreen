@@ -10,23 +10,23 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Menu Screen loaded")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    @IBAction func unwindTFromCalm(segue:UIStoryboardSegue) {
+    @IBAction func unwindFromCalm(segue:UIStoryboardSegue) {
         //This function need to be performed to go back from any view controller and create unwind Segue
     }
     @IBAction func unwindFromMonitor(segue:UIStoryboardSegue) {
         //This function need to be performed to go back from any view controller and create unwind Segue
     }
+
 
     @IBAction func moveToMonitor(_ sender: UIButton) {
         //TODO: Move user to Monitor screen
