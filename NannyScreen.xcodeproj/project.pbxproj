@@ -19,6 +19,9 @@
 		1F921E3D1F51AA9000F590C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F921E3B1F51AA9000F590C7 /* LaunchScreen.storyboard */; };
 		1F921E481F51AA9000F590C7 /* NannyScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F921E471F51AA9000F590C7 /* NannyScreenTests.swift */; };
 		1F921E531F51AA9000F590C7 /* NannyScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F921E521F51AA9000F590C7 /* NannyScreenUITests.swift */; };
+		1FB2620B1FCDFA4E00D2B310 /* Hairdryer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1FB2620A1FCDF94F00D2B310 /* Hairdryer.m4a */; };
+		1FB2620C1FCDFA4F00D2B310 /* WashingMachine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1FB262091FCDF94E00D2B310 /* WashingMachine.m4a */; };
+		1FB262121FCE030B00D2B310 /* Wash_Hands_Running_Water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1FB262111FCE030B00D2B310 /* Wash_Hands_Running_Water.mp3 */; };
 		1FE5BCA41F8116AB00AA02A4 /* MonitorScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5BCA31F8116AB00AA02A4 /* MonitorScreenViewController.swift */; };
 		1FE5BCA61F811ABC00AA02A4 /* CalmScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5BCA51F811ABC00AA02A4 /* CalmScreenViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,9 @@
 		1F921E4E1F51AA9000F590C7 /* NannyScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NannyScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F921E521F51AA9000F590C7 /* NannyScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NannyScreenUITests.swift; sourceTree = "<group>"; };
 		1F921E541F51AA9000F590C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FB262091FCDF94E00D2B310 /* WashingMachine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = WashingMachine.m4a; sourceTree = "<group>"; };
+		1FB2620A1FCDF94F00D2B310 /* Hairdryer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hairdryer.m4a; sourceTree = "<group>"; };
+		1FB262111FCE030B00D2B310 /* Wash_Hands_Running_Water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wash_Hands_Running_Water.mp3; sourceTree = "<group>"; };
 		1FE5BCA31F8116AB00AA02A4 /* MonitorScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorScreenViewController.swift; sourceTree = "<group>"; };
 		1FE5BCA51F811ABC00AA02A4 /* CalmScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,7 @@
 			children = (
 				1F3E8A5B1FC2F48A0040F36D /* NannyScreen.entitlements */,
 				1F921E321F51AA9000F590C7 /* AppDelegate.swift */,
+				1FB262081FCDF90000D2B310 /* calmSounds */,
 				1F921E341F51AA9000F590C7 /* MenuViewController.swift */,
 				1FE5BCA31F8116AB00AA02A4 /* MonitorScreenViewController.swift */,
 				1FE5BCA51F811ABC00AA02A4 /* CalmScreenViewController.swift */,
@@ -167,6 +174,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FB262081FCDF90000D2B310 /* calmSounds */ = {
+			isa = PBXGroup;
+			children = (
+				1FB2620A1FCDF94F00D2B310 /* Hairdryer.m4a */,
+				1FB262091FCDF94E00D2B310 /* WashingMachine.m4a */,
+				1FB262111FCE030B00D2B310 /* Wash_Hands_Running_Water.mp3 */,
+			);
+			path = calmSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +259,11 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -286,8 +306,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB2620B1FCDFA4E00D2B310 /* Hairdryer.m4a in Resources */,
+				1FB2620C1FCDFA4F00D2B310 /* WashingMachine.m4a in Resources */,
 				1F921E3D1F51AA9000F590C7 /* LaunchScreen.storyboard in Resources */,
 				1F921E3A1F51AA9000F590C7 /* Assets.xcassets in Resources */,
+				1FB262121FCE030B00D2B310 /* Wash_Hands_Running_Water.mp3 in Resources */,
 				1F921E381F51AA9000F590C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +506,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NannyScreen/NannyScreen.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63ZXW5B42;
@@ -506,7 +528,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NannyScreen/NannyScreen.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63ZXW5B42;

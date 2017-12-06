@@ -1,0 +1,32 @@
+{
+  "Mac" : [
+    {
+      "name" : "AudioKit",
+      "hash" : "fa909ccc0b572e780755ebab2b1ff6d2c96307c385a5523985c9e99bec290341"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "AudioKit",
+      "hash" : "7350dba7d7d3d11f22ba69ef7c8cd3077f571cdf0200b9e156ceaee54f2682d1"
+    }
+  ],
+  "commitish" : "v4.0.3",
+  "iOS" : [
+    {
+      "name" : "DropDown",
+      "hash" : "74273142ee76d475791e4b500731afde15771a0995c61779883909e0b8768d47"
+    },
+    {
+      "name" : "AudioKitUI",
+      "hash" : "9ee5a429c383f0bda9c1b1443886a9a3f28e619d13841ac31bfc8f11d44f4fbf"
+    },
+    {
+      "name" : "AudioKit",
+      "hash" : "64214cf7ca40829d76261f23333996abb04d8c780bf8db53d2e229898164821e"
+    }
+  ]
+}

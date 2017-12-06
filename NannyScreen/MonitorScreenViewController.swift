@@ -16,6 +16,7 @@ class MonitorScreenViewController: UIViewController {
     @IBOutlet private var audioInputPlot: EZAudioPlot!
     @IBOutlet private var AmpVal: UILabel!
     @IBOutlet private var FreqVal: UILabel!
+    @IBOutlet private var Ev: UILabel!
     
     var microphone:  AKMicrophone!
     var freqTracker: AKFrequencyTracker!
@@ -59,12 +60,14 @@ class MonitorScreenViewController: UIViewController {
         let FallingText = "SOMETHING FELL"
         let CryingText = "CHILD CRIES"
         //Condition to send when something falls
-        if(freqTracker.amplitude > 0.5 && freqTracker.frequency > 1000){
+        if(freqTracker.amplitude > 1.0 && freqTracker.frequency > 500){
             print(FallingText)
+            Ev.text = FallingText
             //TODO - somehow inform parents that something fell
         }
-        else if((freqTracker.amplitude < 0.5 && freqTracker.amplitude > 0.3) && (freqTracker.frequency < 500 && freqTracker.frequency > 100 )){
+        else if((freqTracker.amplitude > 0.3 && freqTracker.amplitude < 0.5) && (freqTracker.frequency < 500 && freqTracker.frequency > 100 )){
             print(CryingText)
+            Ev.text = CryingText
             //TODO - somehow inform parents that child cries
         }
         

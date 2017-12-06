@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -66,10 +67,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40965786848576546" green="0.39303917301556718" blue="0.38917891294355228" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Dishwasher">
+                                <state key="normal" title="Hairdryer">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="dishwasherSound:" destination="XcP-D9-Ibg" eventType="touchUpInside" id="4ag-Hx-TZH"/>
                                     <action selector="moveToMonitor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOY-u1-hQe"/>
                                 </connections>
                             </button>
@@ -83,6 +85,7 @@
                                 </state>
                                 <connections>
                                     <action selector="moveToMonitor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ4-pV-w8S"/>
+                                    <action selector="washingMachineSound:" destination="XcP-D9-Ibg" eventType="touchUpInside" id="ECb-dU-fqB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -206,17 +209,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-mV-Js0">
-                                <rect key="frame" x="162" y="202" width="59" height="58"/>
+                                <rect key="frame" x="149" y="201" width="76" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_mic_none_48pt"/>
                                 <connections>
                                     <action selector="startRecording:" destination="ljN-PV-i3c" eventType="touchUpInside" id="iYI-T6-JZy"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RD-gR-ZaT">
-                                <rect key="frame" x="140" y="252" width="102" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ic_mic_48pt"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amplitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j12-JH-OwN" userLabel="Amplitude">
                                 <rect key="frame" x="72" y="585" width="83" height="21"/>
@@ -246,11 +244,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw5-56-2he" userLabel="Ev">
+                                <rect key="frame" x="72" y="346" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="AmpVal" destination="gVQ-E6-gj7" id="Ft2-QO-ntO"/>
+                        <outlet property="Ev" destination="Gw5-56-2he" id="n4Y-EW-C9t"/>
                         <outlet property="FreqVal" destination="2LH-7V-tAl" id="dn6-io-Eqc"/>
                         <outlet property="audioInputPlot" destination="jLv-wO-KxB" id="Yhw-7k-dcN"/>
                         <segue destination="PG8-u4-ixz" kind="unwind" identifier="unwindFromMonitor" unwindAction="unwindFromMonitorWithSegue:" id="P3S-ps-s83"/>
@@ -264,7 +270,6 @@
     </scenes>
     <resources>
         <image name="bgMenu" width="2736" height="1824"/>
-        <image name="ic_mic_48pt" width="48" height="48"/>
         <image name="ic_mic_none_48pt" width="48" height="48"/>
         <image name="ic_play_for_work_48pt" width="48" height="48"/>
     </resources>
